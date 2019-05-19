@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0, .4);
+}
+
+#photo {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  margin: auto;
+  width: 640px;
+  height: 420px;
+}
+
+section .inner div {
+    opacity: 0;
+    -webkit-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    -webkit-animation-name: Drop;
+    animation-name: Drop;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+#sakura .inner div {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 15px;
+    background: url("../img/sakura.png") no-repeat;
+}
+
+@-webkit-keyframes Drop {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: translateY(50vh);
+        transform: translateY(50vh);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(100vh);
+        transform: translateY(100vh);
+        opacity: 0.3;
+    }
+}
+
+@keyframes Drop {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: translateY(50vh);
+        transform: translateY(50vh);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(100vh);
+        transform: translateY(100vh);
+        opacity: 0.3;
+    }
+}
